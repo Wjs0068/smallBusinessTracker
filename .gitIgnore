@@ -1,0 +1,23 @@
+# Node.js
+node_modules/
+.env
+
+# Compiled output
+dist/
+build/
+out/
+*.log
+
+Thumbs.db
+ehthumbs.db
+
+node_modules/
+android/
+ios/
+
+.expo
+node_modules/
+.idea
+.vscode
+android/
+ios/
