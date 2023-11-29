@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet } from "react-native";
-import { FAB } from "react-native-paper";
+import { StyleSheet, TouchableOpacity } from "react-native";
+
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useTheme } from "react-native-paper";
 import { AppState } from "../state/app";
@@ -12,17 +12,12 @@ const CreateBusinessButton = () => {
 
   const styles = StyleSheet.create({
     fab: {
-      position: "absolute",
       margin: 16,
-      backgroundColor: theme.colors.onPrimary,
-      right: 0,
-      bottom: 50,
     },
   });
 
   return (
-    <FAB
-      icon="plus"
+    <TouchableOpacity
       style={styles.fab}
       onPress={() =>
         setAppState((prevAppState) => ({
@@ -30,7 +25,9 @@ const CreateBusinessButton = () => {
           createBusiness: true,
         }))
       }
-    ></FAB>
+    >
+      <Ionicons name="add-outline" size={30} />
+    </TouchableOpacity>
   );
 };
 

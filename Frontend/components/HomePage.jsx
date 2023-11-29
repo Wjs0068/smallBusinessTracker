@@ -4,7 +4,9 @@ import { Modal, Portal, Text, Button, PaperProvider } from "react-native-paper";
 import { AppState } from "../state/app";
 import { useRecoilState } from "recoil";
 import BusinessForm from "./BusinessForm";
+import CreateBusinessButton from "./CreateBusinessButton";
 import BusinessList from "./BusinessList";
+import AddReceit from "./AddReceit";
 
 const HomePage = () => {
   const [appState, setAppState] = useRecoilState(AppState);
@@ -18,15 +20,18 @@ const HomePage = () => {
   }, []);
 
   return (
-    <ScrollView
-      refreshControl={
-        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
-      }
-      style={styles.container}
-    >
-      <BusinessList refreshing={refreshing} />
-      <BusinessForm />
-    </ScrollView>
+    <View>
+      <ScrollView
+        refreshControl={
+          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+        }
+        style={styles.container}
+      >
+        <BusinessList refreshing={refreshing} />
+
+        <BusinessForm />
+      </ScrollView>
+    </View>
   );
 };
 

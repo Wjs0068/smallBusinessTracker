@@ -4,5 +4,6 @@ export const BusinessState = atom({
   key: "BusinessState",
   default: {
     businesses: [],
+    selectedBusiness: {},
   },
 });

@@ -7,11 +7,12 @@ import { AppState } from "../state/app";
 import { useRecoilState } from "recoil";
 import LoginPage from "./LoginPage";
 import Nav from "./Nav";
-import CreateBusinessButton from "./CreateBusinessButton";
+
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+
   const [userState, setUserState] = useRecoilState(UserState);
   const [appState, setAppState] = useRecoilState(AppState);
   const [tokenPresent, setTokenPresent] = useState(false);
@@ -65,7 +66,7 @@ const App = () => {
       ) : tokenPresent ? (
         <>
           <Nav />
-          <CreateBusinessButton />
+          {/* <CreateBusinessButton /> */}
         </>
       ) : (
         <LoginPage />

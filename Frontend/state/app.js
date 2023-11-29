@@ -7,5 +7,8 @@ export const AppState = atom({
     logoutClicked: false,
     createBusiness: false,
     openBusiness: false,
+    showLoading: false,
+    enterExpense: false,
+    enterSale: false,
   },
 });
